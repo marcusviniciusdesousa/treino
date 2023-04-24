@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -11,21 +15,25 @@
     --cor03: #A6857E;
     --cor04: #57281F;
     --cor05: #574542;
+    --fonte00: Arial, Verdana, sans-serif;
+    --fonte01: 'Castoro Titling', cursive;
+    --fonte02: 'Overpass', sans-serif;
 }
 
 /*Corpo do site*/
 
 body{
     background-color: var(--cor01);
+    font-family: var(--fonte00);
 }
 
 header{
+    height: 100px;
     box-shadow: 5px 7px 2px rgba(0, 0, 0, 0.017);
     float: left;
-    width: 90%;
+    width: 70%;
     background-image: linear-gradient(to right, var(--cor05), var(--cor04));
     text-align: center;
-    padding: 42px 0px;
     color: var(--cor01);
 }
 
@@ -34,23 +42,31 @@ header img {
 }
 
 header h1{
+    font-family: var(--fonte01);
     font-size: 4em;
     font-variant: small-caps;
 }
 
 nav{
     box-shadow: 5px 7px 2px rgba(0, 0, 0, 0.017);
-    width: 10%;
-    padding: 16px 0px;
+    width: 30%;
     float: right;
     background-color: var(--cor04);
     text-align: center;
+    height: 100px;
+    position: relative;
 }
 
 nav ul{
     list-style: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 nav li{
+    font-size: 1.2em;
+    margin-right: 50px;
+    display: inline;
     margin-bottom: 20px;
 }
 
@@ -61,17 +77,22 @@ nav a{
     color: var(--cor01);
 }
 
+nav a:hover{
+    text-decoration: underline;
+}
+
 main{
     margin: auto;
     padding: 50px;
     background-color: white;
-    width: 80%;
+    max-width: 1200px;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.276);
 }
 
 article h2{
+    font-family: var(--fonte01);
     margin: 150px 0px 20px 0px;
     font-size: 2.5em;
     background-image: linear-gradient(to right, var(--cor03), transparent);
@@ -80,9 +101,53 @@ article h2{
 }
 
 article p{
+    font-family: var(--fonte02);
+    text-align: justify;
     text-indent: 30px;
     font-size: 1.4em;
     line-height: 1.5em;
     margin: 10px;
 }
 
+article img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+article ol{
+    list-style: none;
+}
+
+article ol h3{
+    font-family: var(--fonte01);
+    font-size: 2em;
+    text-align: left;
+    text-indent: 80px;
+    margin: 20px;
+}
+
+article ol p{
+    font-family: var(--fonte02);
+    margin: 30px;
+    line-height: 2em;
+    font-size: 1.3em;
+}
+
+footer{
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #F09685;
+}
+
+footer a:hover{
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
